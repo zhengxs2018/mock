@@ -1,0 +1,60 @@
+{
+  "name": "@zhengxs/mock",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.browser.js",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "mock.js",
+    "mock",
+    "better-mock"
+  ],
+  "scripts": {
+    "build": "father-build",
+    "watch": "tsc -b -w --preserveWatchOutput",
+    "test": "jest",
+    "cov": "jest --coverage",
+    "ci": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "format": "prettier --write \"**/*.{js,vue,ts,tsx,json}\"",
+    "lint": "prettier --check \"**/*.{js,vue,ts,tsx,json}\"",
+    "commit": "git-cz",
+    "typedoc": "typedoc --options typedoc.js src"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@vue/reactivity": "^3.0.0",
+    "better-mock": "^0.2.8",
+    "path-to-regexp": "^6.1.0",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/power-assert": "^1.5.3",
+    "cross-env": "^7.0.2",
+    "father-build": "^1.18.5",
+    "jest": "^26.4.2",
+    "power-assert": "^1.6.1",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "typedoc": "^0.19.2",
+    "typescript": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhengxs2018/mock"
+  },
+  "engines": {
+    "node": ">= 12.x",
+    "npm": ">= 6.x"
+  },
+  "author": {
+    "name": "zhengxs",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}
